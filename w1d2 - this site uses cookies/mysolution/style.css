@@ -23,7 +23,7 @@
 }
 
 .cookiesmove {
-  animation-name: move1;
+  animation-name: move2;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-direction: linear;
