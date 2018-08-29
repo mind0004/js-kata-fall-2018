@@ -1,0 +1,56 @@
+.cookies {
+  position: absolute;
+  background: red;
+  width: 30%;
+  bottom: -20%;
+  left: 35%;
+
+  animation-name: move1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes move1 {
+  0% {
+    bottom: -30%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
+
+.cookiesmove {
+  animation-name: move1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-direction: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes move2 {
+  0% {
+    bottom: 0%;
+  }
+
+  100% {
+    bottom: -30%;
+  }
+}
+
+.start {
+  width: 70%;
+}
+
+.end {
+  width: 70%;
+}
+
+.goaway {
+  position: relative;
+  top: 50%;
+  left: 70%;
+  width: 20%;
+}
