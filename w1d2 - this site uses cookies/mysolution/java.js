@@ -1,8 +1,17 @@
-document.querySelector(".end").style.visibility = "hidden";
+let activeCookie = true;
 
-function gtfo() {
-  //document.getElementById("#reklamer").classList.remove("cookies");
-  document.getElementById("#reklamer").addClass(".cookiesmove");
-  //document.querySelector(".start").style.visibility = "hidden";
-  //document.querySelector(".end").style.visibility = "visible";
+document
+  .querySelector("#cookies button")
+  .addEventListener("click", AreCookiesAway);
+
+function AreCookiesAway() {
+  activeCookie = false;
+  begoneCookies();
+}
+
+function begoneCookies() {
+  if (activeCookie) {
+  } else {
+    cookies.style.bottom = "-100px";
+  }
 }
