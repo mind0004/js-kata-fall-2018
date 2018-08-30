@@ -8,31 +8,38 @@ body {
   justify-content: space-around;
 }
 
-#modal_container {
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#modal_container {
-  visibility: hidden;
-}
-
-#modal_window {
-  max-width: 80vw;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
 #details {
   cursor: pointer;
+}
+
+.popup {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 1s;
+  z-index: 100;
+  display: flex;
+}
+
+.popup-content {
+  background: #fff;
+  width: 60vw;
+  position: absolute;
+  left: 20vw;
+  height: auto;
+  background-color: #5c1414;
+  justify-content: center;
+}
+
+.popup p {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+#luk {
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
