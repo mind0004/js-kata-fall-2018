@@ -1,17 +1,27 @@
-document.addEventListener("DOMContentLoaded", fetchstuff);
+let tweets;
 
-async function fetchstuff() {
-  let jsonObjekt = await fetch("https://kea-alt-del.dk/twitter/api");
-  let tweets = await jsonObjekt.json();
+document.addEventListener("DOMContentLoaded", init);
 
-  let template = document.querySelector("#myTemplate").content;
-  let clone = template.cloneNode(true);
+async function init() {
+  let jsonData = await fetch("https://kea-alt-del.dk/twitter/api/");
+  tweets = await jsonData.json();
 
-  tweets.forEach(madret => {
-    klon("[data-overskrift2]").innerHTML = tweets.statuses.text;
+  displayTweets(tweets);
+}
 
-    dest.appendChild(klon);
+function displayTweets(tweets) {
+  console.log("tweets");
+
+  let temp = document.querySelector("#tweet-template");
+  let dest = document.querySelector("#tweet-container");
+
+  tweets.statuses.forEach(tweet => {
+    let clone = temp.cloneNode(true).content;
+
+    clone.querySelector(".tweet-date").textContent = tweet.created_at;
+    clone.querySelector(".tweet-user").textContent = tweet.user.name;
+    clone.querySelector(".tweet-text").textContent = tweet.text;
+
+    dest.appendChild(clone);
   });
-
-  document.querySelector("[data-overskrift2]").innerHTML = tweets.statuses.text;
 }

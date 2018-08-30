@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheets" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="tweets">
+    <div id="tweet-container">
     </div>
 
-    <template class="tweettemplate">
-        <h2 data-text></h2>
-        <h1 data-hashtags></h1>
-        <p data-created_at></p>
+    <template id="tweet-template">
+        <h3 class="tweet-date"></h3>
+        <h2 class="tweet-user"></h2>
+        <p class="tweet-text"></p>
     </template>
-
-
     <script src="java.js "></script>
 </body>
 
